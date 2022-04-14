@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background: green;
+    color: black;
+}
+h1{
+    background: #5EE6EB;
+    height: 120px;
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    line-height: 100px;
+}
+.div{
+    background: #ABB2B9 ;
+    border: 2px solid red;
+    float: left;
+    width: 250px;
+    height: 700px;
+    text-indent: 15px;
+    list-style-position: inside;
+}
+section{
+    width: 81%;
+    float: right;
+}
+.div-2{
+    background: #82E0AA ;
+    border:2px solid blue;
+    height: 700px;
+    text-indent: 15px;
+}
+#border{
+    border-bottom: 3px solid yellow;
+}
