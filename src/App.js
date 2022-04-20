@@ -1,5 +1,4 @@
 import Screens from './ Screens';
-import './App.css';
 
 function App() {
   return (

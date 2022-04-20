@@ -2,29 +2,31 @@ import React from "react"
 import "./style.css"
 
 const Screens = () => {
+    const data = fetch('http://hp-api.herokuapp.com/api/characters')
+        .then(response => response.json())
+        .then((data) => data.map(({name,image}) => console.log(name, image)))
     return (
         <div>
             <header>
                 <h1>Harry Potter Characters</h1>
 
-                <div class="div">
+                <div className="div">
                     <ul>
-                        <li>Name</li>
-                        <h3>Harry Potter</h3>
-
-                        <img src="" alt="picture" />
-
-                        <li>Name</li>
-
-                        <h3>Hermione Granger</h3>
-
-                        <img src="" alt="picture" />
+                        <li>Name:
+                            <h3>Harry Potter</h3>
+                            <img src="" alt="picture" />
+                        </li>
+                        
+                        <li>Name:
+                            <h3>Hermione Granger</h3>
+                            <img src="" alt="picture" />
+                        </li>
                     </ul>
                 </div>
             </header>
 
             <section>
-                <div class="div-2">
+                <div className="div-2">
                     <h2>Details Abaut Harry Potter Characters</h2>
 
                     <article>
