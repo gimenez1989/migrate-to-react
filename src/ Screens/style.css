@@ -44,18 +44,17 @@ ul {
     height: 500px;
 }
 p {
-    padding-top: 10px;
+    padding-top: 15px;
 }
 h2 {
-    padding-top: 10px;
+    padding-top: 15px;
 }
 h3 {
-    padding-top: 10px;
+    padding-top: 15px;
 }
 li {
-    padding-top: 5px;
+    padding-top: 10px;
 }
 img {
-    padding-top: 10px;
-    width: 200px;
+    padding-top: 15px;
 }

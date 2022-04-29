@@ -1,10 +1,22 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import "./style.css"
 
 const Screens = () => {
-    const data = fetch('http://hp-api.herokuapp.com/api/characters')
-        .then(response => response.json())
-        .then((data) => data.map(({name,image}) => console.log(name, image)))
+    const [name, setName] = useState(null)
+    // const [image, setImage] = useState(null)
+    
+    useEffect(() => {
+        const data = fetch('http://localhost:3003/data/characters.json')
+            .then(response => response.json())
+            .then(setName)
+            // .then((data) => data.map(({name,image}) => console.log(name, image)))
+    }, [])
+
+    const data = name?.map(({name, image}) => [name, image])
+    console.log('data: ', data)
+    useEffect(() => {
+        console.log('name: ', name)
+    }, [])
     return (
         <div>
             <header>
@@ -12,15 +24,12 @@ const Screens = () => {
 
                 <div className="div">
                     <ul>
-                        <li>Name:
+                        {
+                            <li>Name:
                             <h3>Harry Potter</h3>
                             <img src="" alt="picture" />
-                        </li>
-                        
-                        <li>Name:
-                            <h3>Hermione Granger</h3>
-                            <img src="" alt="picture" />
-                        </li>
+                            </li>
+                        }
                     </ul>
                 </div>
             </header>
